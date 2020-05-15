@@ -1,4 +1,4 @@
-package books;
+package com.jjh.books;
 
 public class BookshopApp {
     public static void main(String[] args) {
@@ -8,14 +8,14 @@ public class BookshopApp {
         Address authorAddress = new Address(10, "High Street",
                 "Any Town", "Somerset",
                 "SA1 23Z");
-        Author author = new Author("Pete Smith", authorAddress);
+        Author author = new Author("Pete Smith", authorAddress, "Technical");
 
         Address publisherAddress = new Address(1, "Main Street",
                 "Some City", "Kent",
                 "KA1 43A");
         Publisher publisher =
                 new Publisher("Tech Books Publishing Ltd.",
-                        publisherAddress);
+                        publisherAddress, "Tech Co");
 
         Book book = new Book("Java Unleashed",
                 author, publisher, 15.95);

@@ -1,4 +1,4 @@
-package books;
+package com.jjh.books;
 
 public class Address {
 	private int number;
