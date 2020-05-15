@@ -20,18 +20,22 @@ public class Bookshop {
 
         Book book = new Book("Java Unleashed", author, publisher, 15.95);
         System.out.println("Book: " + book);
+        this.books.add(book);
 
         System.out.println("\nCalculating the Sales Discount price");
         book.setSaleDiscount(10.0);
         System.out.println("Sale price of book: " + book.calculateSalePrice());
 
-        Book book2 = new Book("Java For Professionals", author, publisher, 12.55);
-        System.out.println("\nBook2: " + book2);
+        try {
+            Book book2 = new Book("Java For Professionals", author, publisher, 12.55);
+            System.out.println("\nBook2: " + book2);
 
-        System.out.println("Book Instance Count: " + Book.getCount());
+            System.out.println("Book Instance Count: " + Book.getCount());
 
-        this.books.add(book);
-        this.books.add(book2);
+            this.books.add(book2);
+        } catch (BookException exp) {
+            exp.printStackTrace();
+        }
 
     }
 
