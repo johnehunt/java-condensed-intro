@@ -1,2 +1,2 @@
 # java-condensed-intro
-A condenses Introduction to Java
+A condensed Introduction to Java
