@@ -1,2 +1,2 @@
 # java-condensed-intro
-A condensed Introduction to Java
+Labs for a condensed Introduction to Java
