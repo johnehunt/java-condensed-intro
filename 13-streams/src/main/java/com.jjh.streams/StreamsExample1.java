@@ -11,6 +11,7 @@ public class StreamsExample1 {
         List<Student> students = Arrays.asList(new Student("History", 65, "Gryff"),
                 new Student("English", 75, "Jasmine"), new Student("Pharmacology", 68, "Adam"),
                 new Student("Law", 63, "Eloise"));
+        
 
         List<String> subjects = students.stream().map(t -> t.getSubject()).collect(Collectors.toList());
 
