@@ -9,16 +9,21 @@ public class SampleFuncApp1 {
     }
 
     public static void main(String[] args) {
-        
-        var tripler = new Function<Integer, Integer>() {
-            public Integer apply(Integer i) {
-                return i * 3;
-            }
-        };
-        
-        System.out.println(tripler.apply(3));
-        System.out.println(processor(3, new Doubler()));
-        System.out.println(processor(3, tripler));
+
+        Function<Integer, Integer> d = i -> i * 2;
+
+        doSomething(2, d);
+        System.out.println("--------------");
+        doSomething(2, i -> i * 3);
+        doSomething(2, i -> i * i);
+        doSomething(2, i -> i + 3);
+    }
+
+    // Higher Order Function - a function that takes a function
+    public static void doSomething(int data, Function<Integer, Integer> func) {
+        System.out.println("In do Something");
+        System.out.println(func.apply(data));
+        System.out.println("Leaving do Something");
     }
 
 }
