@@ -47,7 +47,7 @@ class CalculatorTest {
     }
 
     @Test
-    void testSUbtractOneFromCalculator() {
+    void testSubtractOneFromCalculator() {
         Calculator calc = new Calculator();
         calc.subtract(1);
         int result = calc.getTotal();
@@ -59,6 +59,7 @@ class CalculatorTest {
     void skippedTest() {
         // not executed
     }
+
 
     @Test
     @DisplayName("test calculator memory")
@@ -81,7 +82,12 @@ class CalculatorTest {
     }
 
     static Stream<Arguments> valuesProvider() {
-        return Stream.of(Arguments.of(1, 1, 2), Arguments.of(1, 2, 3));
+        return Stream.of(Arguments.of(0, 0, 0),
+                Arguments.of(1, 0, 1),
+                Arguments.of(0, 1, 1),
+                Arguments.of(1, 1, 2),
+                Arguments.of(1, 2, 3));
     }
+
 
 }
