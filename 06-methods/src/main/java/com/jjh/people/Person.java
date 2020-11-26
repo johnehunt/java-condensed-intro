@@ -37,7 +37,6 @@ public class Person {
 	}
 
 	public String toString() {
-		return String.format("Person [age=%s, name=%s]", age, name);
+		return "Person(" + age + ", " + name + ")";
 	}
-
 }
