@@ -19,3 +19,6 @@ bin-release/
 /04-maven-app/04-maven-app.iml
 
 *.iml
+/03-classes/target/classes/com/jjh/
+/.idea/
+/target
