@@ -1,6 +1,7 @@
 package com.jjh.streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,14 +14,19 @@ public class StreamsExample1 {
                 new Student("Law", 63, "Eloise"));
         
 
-        List<String> subjects = students.stream().map(t -> t.getSubject()).collect(Collectors.toList());
+        List<String> subjects = students.stream()
+                                        .map(t -> t.getSubject())
+                                        .collect(Collectors.toList());
 
         System.out.println(subjects);
 
         long temp = students.stream().map(t -> t.getGrade()).count();
         System.out.println(temp);
 
-        System.out.println(students.stream().map(t -> t.getGrade()).max(Integer::max));
+        students.stream()
+                .map(t -> t.getGrade())
+                .max(Comparator.naturalOrder())
+                .ifPresent(System.out::println);
     }
 
 }
