@@ -6,5 +6,5 @@ public interface Organizer {
 	
 	void add(String appointment, String date);
 	String get(String date);
-	public boolean remove(String date);
+	boolean remove(String date);
 }

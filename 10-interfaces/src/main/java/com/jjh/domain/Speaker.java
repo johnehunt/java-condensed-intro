@@ -2,9 +2,9 @@ package com.jjh.domain;
 
 public interface Speaker {
 	
-	public void saySomething();
+	void saySomething();
 	
-	default public void sayHello() {
+	default void sayHello() {
 		System.out.println("Speaker - Hello World");
 	}
 }

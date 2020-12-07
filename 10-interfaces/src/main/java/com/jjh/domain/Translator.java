@@ -1,7 +1,7 @@
 package com.jjh.domain;
 
 public interface Translator {
-	default public void sayHello() {
+	default void sayHello() {
         System.out.println("Actor - Bonjour");
     }
 }
