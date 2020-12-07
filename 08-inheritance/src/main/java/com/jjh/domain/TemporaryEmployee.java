@@ -1,7 +1,5 @@
 package com.jjh.domain;
 
-import java.util.Date;
-
 public class TemporaryEmployee extends Employee {
 
 	private String startDate = "";
