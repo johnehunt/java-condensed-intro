@@ -12,14 +12,17 @@ public class Person {
 		this.age = age;
 	}
 
+	// Another constructor
 	public Person(String name) {
 		this(name, 0);
 	}
 
+	// Another constructor
 	public Person() {
 		this("John");
 	}
 
+	// Methods
 	public int getAge() {
 		return age;
 	}
