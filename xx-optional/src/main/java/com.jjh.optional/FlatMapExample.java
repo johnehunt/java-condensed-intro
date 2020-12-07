@@ -16,7 +16,7 @@ public class FlatMapExample {
 
 class Populations {
 	
-	private static Map<String, Integer> populations = new HashMap<>();
+	private static final Map<String, Integer> populations = new HashMap<>();
 	
 	static {
 	 populations.put("London", 8_000_000);

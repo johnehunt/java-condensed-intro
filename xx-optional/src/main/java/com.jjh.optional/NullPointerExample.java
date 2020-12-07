@@ -14,13 +14,13 @@ public class NullPointerExample {
 
 
 class Trader {
-	private String MSID;
+	private final String ID;
 	private String name;
 	private Portfolio portfilio;
 	
 	public Trader(String mSID, String name) {
 		super();
-		MSID = mSID;
+		ID = mSID;
 		this.name = name;
 	}
 
@@ -32,8 +32,8 @@ class Trader {
 		this.name = name;
 	}
 
-	public String getMSID() {
-		return MSID;
+	public String getID() {
+		return ID;
 	}
 
 	public Portfolio getPortfilio() {
@@ -47,8 +47,8 @@ class Trader {
 }
 
 class Portfolio {
-	private String id;
-	private List<Asset> assets = new ArrayList<>();
+	private final String id;
+	private final List<Asset> assets = new ArrayList<>();
 	public Portfolio(String id) {
 		this.id = id;
 	}
@@ -76,7 +76,7 @@ class Portfolio {
 }
 
 class Asset {
-	private Symbol symbol;
+	private final Symbol symbol;
 
 	public Asset(Symbol symbol) {
 		this.symbol = symbol;

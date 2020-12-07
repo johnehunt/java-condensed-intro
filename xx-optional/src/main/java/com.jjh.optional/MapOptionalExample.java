@@ -20,7 +20,7 @@ public class MapOptionalExample {
 }
 
 class Capitals {
-	private static Map<String, String> capitals = new HashMap<>();
+	private static final Map<String, String> capitals = new HashMap<>();
 
 	static {
 		capitals.put("UK", "London");
