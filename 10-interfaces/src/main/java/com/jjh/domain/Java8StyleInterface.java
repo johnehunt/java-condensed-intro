@@ -24,7 +24,7 @@ public interface Java8StyleInterface {
     }
 
     private static boolean isNull(String str) {
-        return str == null ? true : "".equals(str) ? true : false;
+        return str == null || ("".equals(str) ? true : false);
     }
 
     void doIt();
