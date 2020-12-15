@@ -1,6 +1,7 @@
 package com.jjh.domain;
 
 public class Employee extends Person {
+
     private int id;
     private int empNumber;
     private double hourlyRate = 24.00;
