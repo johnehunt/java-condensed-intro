@@ -10,9 +10,7 @@ public class SampleFuncApp4 {
         int MAX = 100;
 
         // The Lambda captures the value of MAX
-        Predicate<Integer> check = i -> {
-            return i <= MAX;
-        };
+        Predicate<Integer> check = i -> i <= MAX;
 
         System.out.println(check.test(10));
         System.out.println(check.test(100));
@@ -35,9 +33,7 @@ class Checker {
     // Can reset as required.
     private int MAX = 100;
     // Lambda captures MAX but w.r.t. enclosing object
-    public Predicate<Integer> check = i -> {
-        return i <= MAX;
-    };
+    public Predicate<Integer> check = i -> i <= MAX;
 
     public void setMax(int x) {
         MAX = x;
