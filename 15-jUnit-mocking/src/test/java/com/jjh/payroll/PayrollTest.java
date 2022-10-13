@@ -15,6 +15,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+@DisplayName("Test the Payroll class in isolation")
 @ExtendWith(MockitoExtension.class)
 class PayrollTest {
 
@@ -30,10 +31,12 @@ class PayrollTest {
         Mockito.when(processor.next())
                 .thenReturn(new Person("John", 47, "ABC123"))
                 .thenReturn(new Person("Denise", 44, "XYZ987"));
+
         Mockito.when(processor.hasNext())
                 .thenReturn(true)
                 .thenReturn(true)
                 .thenReturn(false);
+
         payroll = new Payroll(processor);
     }
 
@@ -42,7 +45,7 @@ class PayrollTest {
     public void testCanIterateOverPeople() {
         List<String> names = payroll.getPeopleToPay();
         assertNotNull(names, "List of names expected");
-        assertEquals(2, names.size(), "There shoudl only be two names returned");
+        assertEquals(2, names.size(), "There should only be two names returned");
         assertEquals("John", names.get(0));
         assertEquals("Denise", names.get(1));
         // Now verify that the Mock was called as expected
@@ -50,6 +53,8 @@ class PayrollTest {
         // i.e. that next was called twice
         Mockito.verify(processor,
                 Mockito.times(2)).next();
+        Mockito.verify(processor,
+                Mockito.times(3)).hasNext();
 
     }
 }
