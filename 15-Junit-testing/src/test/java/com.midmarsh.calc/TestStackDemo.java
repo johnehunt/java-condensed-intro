@@ -10,7 +10,7 @@ import java.util.Stack;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("A stack")
-class TestingAStackDemo {
+class TestStackDemo {
     Stack<Object> stack;
 
     @Test
