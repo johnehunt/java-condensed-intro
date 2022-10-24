@@ -3,7 +3,7 @@ package com.jjh.func;
 public class RunnableApp {
 
     public static void main(String[] args) {
-        var runner = new Runner();
+        Runner runner = new Runner();
         runner.run();
     }
 

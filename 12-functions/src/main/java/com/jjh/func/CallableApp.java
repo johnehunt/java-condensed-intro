@@ -5,8 +5,8 @@ import java.util.concurrent.Callable;
 public class CallableApp {
 
     public static void main(String[] args) throws Exception {
-        var calc = new Calculator();
-        var result = calc.call();
+        Calculator calc = new Calculator();
+        int result = calc.call();
         System.out.println("result: " + result);
     }
 

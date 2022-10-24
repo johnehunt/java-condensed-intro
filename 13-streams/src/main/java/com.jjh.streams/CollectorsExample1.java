@@ -22,14 +22,20 @@ public class CollectorsExample1 {
         Set<Student> res2 = students.stream().collect(Collectors.toSet());
         System.out.println(res2);
 
-        Map<String, List<Student>> res3 = students.stream().collect(Collectors.groupingBy(Student::getSubject));
+        Map<String, List<Student>> res3 =
+                students.stream()
+                        .collect(Collectors.groupingBy(Student::getSubject));
         System.out.println(res3);
 
-        IntSummaryStatistics res4 = students.stream().collect(Collectors.summarizingInt(p -> p.getGrade()));
+        IntSummaryStatistics res4 =
+                students.stream()
+                        .collect(Collectors.summarizingInt(p -> p.getGrade()));
         System.out.println(res4);
 
         // Keys must be unique - can supply a function to handle duplicates
-        Map<Object, Object> res5 = students.stream().collect(Collectors.toMap(p -> p.getGrade(), p -> p.getSubject()));
+        Map<Object, Object> res5 =
+                students.stream()
+                        .collect(Collectors.toMap(p -> p.getGrade(), p -> p.getSubject()));
         System.out.println(res5);
 
         // Custom Collector
